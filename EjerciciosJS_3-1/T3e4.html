@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- HTML -->
+    <button onclick="ej4()">Ejercicio 4</button>
+    <br><br>
+    <section id="ejer4"></section>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        function ej4(){
+            let nombres = ["Julián", "Rodrigo", "Mateo", "Valdomero"], respuesta="";
+            respuesta += "Array Normal: <br>"+nombres+"<br> <br>";
+            nombres.reverse();
+            respuesta += "Array Inverso: <br>"+nombres;
+            document.getElementById("ejer4").innerHTML = respuesta;
+        }
+    </script>
+</body>
+</html>

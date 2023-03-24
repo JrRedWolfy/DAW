@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="ej3()">Ejercicio 3</button>
+
+    <p id="ejer3"></p>
+
+
+    <script>
+
+        function ej3(){
+           
+            let vNum = [4,0,3,4,7,3,5,8,1,8,8,0,2,3,1,2,5,7,3,2,5,1];
+            
+            //Eliminamos las instancias repetidas usando const y Set
+            const dataArr = new Set(vNum);
+            let result = [...dataArr];
+            
+            //Ordenarmos el array y lo mostramos
+            result.sort();
+            document.getElementById("ejer3").innerHTML = "El array es: " + result;
+        }
+
+    </script>
+
+</body>
+</html>

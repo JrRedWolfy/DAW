@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="scripts.js"></script>
+  
+</head>
+
+<body>
+  <h1>OBJETOS PREDEFINIDOS</h1>
+
+  <!-- BOTONES PARA LLAMAR A LAS DISTINTAS FUNCIONES DE JS -->
+  <button onclick="pideNumero()">IS NAN</button>
+  <button onclick="pruebaStrings()">STRINGS</button>
+  <button onclick="arrays()">ARRAYS</button>
+
+  <!-- AQUÍ MOSTRAREMOS LOS RESULTADOS DE CADA FUNCIÓN -->
+  <section id="solucion"></section>
+  <section id="solucion2"></section>
+
+  <!-- ENLAZAMOS A LOS DISTINTOS FICHEROS .JS DE NUESTRO PROYECTO -->
+  <script src="scripts.js"></script>
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+  
+  <!-- JS DIRECTAMENTE EN NUESTRO HTML (no es la mejor opción) -->
+  <script>
+    function pideNumero(){
+      let num; 
+      do{
+        num = prompt("Escribe un número");
+      }while(isNaN(num));  document.getElementById("solucion").innerHTML = "El número es " + num;
+    }
+    
+    function pruebaStrings(){
+      let cadena = "Nombre:Apellidos:Identificador";
+      cadena=cadena.toUpperCase();
+      let solucion = cadena;
+      let splitCampos = cadena.split(":");
+      solucion += "<br>" + splitCampos;
+      let splitCampo1 = cadena.split(":", 2);
+      solucion += "<br>" + splitCampo1;
+      let apellido = splitCampos[1];
+      solucion += "<br>" + apellido;
+      document.getElementById("solucion").innerHTML = solucion;
+    }
+
+    function arrays(){
+      let miArray;
+      miArray = ["a", "b", "c", "d", "e"];
+      solucion = miArray.push("x");
+      document.getElementById("solucion").innerHTML = miArray;
+      miArray.reverse();
+      alert(miArray);
+      miArray.join(",");
+      document.getElementById("solucion").innerHTML = miArray;
+      nuevoArray = [5, 4, 7, 2];
+      document.getElementById("solucion2").innerHTML = nuevoArray;
+      nuevoArray.sort();
+      alert(nuevoArray);
+      
+    }
+    
+
+  </script>
+</body>
+
+</html>

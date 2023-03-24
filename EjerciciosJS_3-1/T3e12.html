@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- HTML -->
+    <button onclick="ej12()">Ejercicio 12</button>
+    <br><br>
+    <section id="ejer12"></section>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        function ej12(){
+            let dia, mes, anio, fecha = new Date();
+
+            dia = fecha.getDay()+2;
+            mes = fecha.getMonth()+1;
+            anio = fecha.getFullYear();
+
+            fecha = dia+"-"+mes+"-"+anio;
+
+            document.getElementById("ejer12").innerHTML = "La fecha actual es: "+fecha;
+        }
+    </script>
+</body>
+</html>

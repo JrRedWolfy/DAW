@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="ej7()">Ejercicio 7</button>
+
+    <p id="ejer7"></p>
+
+
+    <script>
+
+        function ej7(){
+           
+            let cadena = prompt("Escribe una cadena de caracteres");
+            let vLetra = cadena.split('');
+
+            //let vRever = vLetra.reverse();
+
+            for(let i = vLetra.length-1; i >= 0; i--){
+                if(vLetra[i] == ' '){
+                    vLetra.splice(i, 1);
+                }
+            }
+
+            let cierto = 'si';
+
+            for(let i = 0; i < Math.trunc(vLetra.length/2); i++){
+
+                if(vLetra[i] != vLetra[(vLetra.length-i-1)]){
+                    cierto = 'false';
+                    break;
+                }
+            }
+
+            if(cierto == 'si'){
+                document.getElementById("ejer7").innerHTML = "Has introducido un palíndromo";
+            } else {
+                document.getElementById("ejer7").innerHTML = "NO es un palíndromo D:";
+            }
+            
+        }
+
+    </script>
+
+</body>
+</html>

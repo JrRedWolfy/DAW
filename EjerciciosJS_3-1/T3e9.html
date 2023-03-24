@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="ej9()">Ejercicio 9</button>
+
+    <p id="ejer9"></p>
+
+
+    <script>
+
+        function ej9(){
+           
+            let sentence = prompt("Introduce una frase");
+
+            sentence = sentence.toLowerCase();
+            sentence = sentence.substring(0, 1).toUpperCase() + sentence.substring(1, sentence.length);
+
+            
+            for (let i = 0; i < sentence.length; i++){
+                if (sentence.substring(i, i+1) == ' '){
+                    
+                    sentence = sentence.substring(0, i+1) + sentence.substring(i+1, i+2).toUpperCase() + sentence.substring(i+2, sentence.length);
+                }
+            }
+            
+            document.getElementById("ejer9").innerHTML = sentence;
+        }
+
+    </script>
+
+</body>
+</html>

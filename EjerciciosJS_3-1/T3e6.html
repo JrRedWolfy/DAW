@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- HTML -->
+    <button onclick="ej6()">Ejercicio 6</button>
+    <br><br>
+    <section id="ejer6"></section>
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        function ej6(){
+            let email, valido=false, usuario, dominio, regex = new RegExp('^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$');
+
+            do{
+                email = prompt("Escribe tu correo electronico");
+                if (email == ''){
+                    alert("Debes escribir algo"); 
+                }
+                else if(!regex.test(email)){
+                    alert( email + " No es valido");
+                }
+                else{
+                    valido=true;
+                }
+            }while(valido==false);
+
+            usuario = email.substring(0, [email.indexOf('@')]);
+            dominio = email.substring(email.indexOf('@')+1);
+
+            document.getElementById("ejer6").innerHTML = "Tu email es correcto: <br> Usuario: "+usuario+"<br>Dominio: "+dominio;
+        }
+    </script>
+</body>
+</html>

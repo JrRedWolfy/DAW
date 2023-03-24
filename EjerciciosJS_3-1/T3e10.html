@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- HTML -->
+    <button onclick="ej10()">Ejercicio 10</button>
+    <br><br>
+    <section id="ejer10"></section>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        function ej10(){
+            let fecha, dia, mes, anio, correcto=false;
+
+            while(correcto==false){
+                fecha = prompt("Escribe una fecha en el formato dd-mm-aaaa");
+                if(fecha == ""){
+                    alert("Debes escribir algo en el campo fecha");
+                }
+                else if (fecha.split("-")==fecha){
+                    alert("Debes escribir guiones en medio de cada ocuurencia");
+                }
+                else{
+                    dia = fecha.split("-", [0]);
+                    mes = fecha.split("-", [1]);
+                    anio = fecha.split("-", [2]);
+
+                    if(dia>31 && dia<1){
+                        alert("Día incorrecto");
+                    }
+                    else if (mes>12 && mes<1){
+                        alert("Mes incorrecto");
+                    }
+                    else{
+                        document.getElementById("ejer10").innerHTML = "La fecha es valida";
+                        correcto=true;
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

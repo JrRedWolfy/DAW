@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        table, tr, td{
+        border: 2px solid green;
+        padding: 10px 30px;
+        text-align: center;
+        border-collapse: collapse;
+    }
+    </style>
+
+    <!-- HTML -->
+    <button onclick="EJ16()">Ejercicio 16</button>
+    <br><br>
+    <section id="solucion"></section>
+
+    <!-- JAVASCRIPT -->
+    <script>
+function EJ16(){
+            let tabla="";
+            dias=[" ", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes"];
+            horario=[
+                ["DWS", "DIW", "DWS", "DWC", "EIE"],
+                ["DWS", "DIW", "DWS", "DWC", "EIE"],
+                ["RECREO","RECREO","RECREO","RECREO","RECREO"],
+                ["DWS", "DWS", "DIW", "DWS", "DIW"],
+                ["EIE", "DWS", "DIW", "DWS", "DIW"],
+                ["RECREO","RECREO","RECREO","RECREO","RECREO"],
+                ["DAW", "DWC", "ING", "DAW", "DWC"],
+                ["DAW", "DWC", "ING", "DAW", "DWC"]
+            ];
+
+            tabla += '<table cellspacing="0" cellpadding="0">';
+
+            for (i=-1; i<horario.length; i++){
+
+                if (i==-1){
+                    tabla += "<tr>"; 
+                    for (e=0; e < 6; e++){
+                        tabla += '<td>' + dias[e] + '</td>';
+                    }
+                    tabla += "</tr>"; 
+                } else {
+                    tabla += "<tr>";
+
+                    for(j=0; j<horario[i].length; j++){
+
+                        if(j==0){
+                        
+                            tabla += "<td>Fecha X</td>";
+                        }
+                        tabla += "<td>"+horario[i][j]+"</td>";
+                    
+                    }
+                    tabla += "</tr>";
+                }
+
+            }
+            tabla += '</table>';
+            document.getElementById("solucion").innerHTML = tabla;
+        }
+    </script>
+</body>
+</html>

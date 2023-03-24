@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        table, tr, td{
+        border: 2px solid green;
+        padding: 10px 30px;
+        text-align: center;
+        border-collapse: collapse;
+    }
+    </style>
+
+    <!-- HTML -->
+    <button onclick="EJ18()">Ejercicio 18</button>
+    <br><br>
+    <section id="solucion"></section>
+
+    <!-- JAVASCRIPT -->
+    <script>
+function EJ18(){
+            var horario = [
+                ['Lunes','09:00-09:50','DWS'],
+                ['Lunes','09:50-10:40','DWS'],
+                ['Lunes','10:40-11:00','RECREO'],
+                ['Lunes','11:00-10:50','DWS'],
+                ['Lunes','11:50-12:40','EIE'],
+                ['Lunes','12:40-12:55','RECREO'],
+                ['Lunes','12:55-13:45','DAW'],
+                ['Lunes','13:45-14:35','DAW'],
+                ['Martes','09:00-09:50','DIW'],
+                ['Martes','09:50-10:40','DIW'],
+                ['Martes','10:40-11:00','RECREO'],
+                ['Martes','11:00-10:50','DWS'],
+                ['Martes','11:50-12:40','DWS'],
+                ['Martes','12:40-12:55','RECREO'],
+                ['Martes','12:55-13:45','DWC'],
+                ['Martes','13:45-14:35','DWC'],
+                ['Miércoles','09:00-09:50','DWS'],
+                ['Miércoles','09:50-10:40','DWS'],
+                ['Miércoles','10:40-11:00','RECREO'],
+                ['Miércoles','11:00-10:50','DIW'],
+                ['Miércoles','11:50-12:40','DIW'],
+                ['Miércoles','12:40-12:55','RECREO'],
+                ['Miércoles','12:55-13:45','ING'],
+                ['Miércoles','13:45-14:35','ING'],
+                ['Jueves','09:00-09:50','DWC'],
+                ['Jueves','09:50-10:40','DWC'],
+                ['Jueves','10:40-11:00','RECREO'],
+                ['Jueves','11:00-10:50','DWS'],
+                ['Jueves','11:50-12:40','DWS'],
+                ['Jueves','12:40-12:55','RECREO'],
+                ['Jueves','12:55-13:45','DAW'],
+                ['Jueves','13:45-14:35','DAW'],
+                ['Viernes','09:00-09:50','EIE'],
+                ['Viernes','09:50-10:40','EIE'],
+                ['Viernes','10:40-11:00','RECREO'],
+                ['Viernes','11:00-10:50','DIW'],
+                ['Viernes','11:50-12:40','DIW'],
+                ['Viernes','12:40-12:55','RECREO'],
+                ['Viernes','12:55-13:45','DWC'],
+                ['Viernes','13:45-14:35','DWC']
+                ];
+                
+                
+                let tabla = "";
+            tabla += '<table cellspacing="0" cellpadding="0">';
+
+               let x = 0;
+                for (i = 0; i < 9; i++){
+
+                    tabla += "<tr>";
+                    if(i != 0){
+                        tabla +="<td>"+horario[i-1][1]+"</td>";
+                    }
+                    
+                    if(i == 0){
+                        tabla += "<td> </td>";
+                        for (e = 0; e < 5; e++){
+                        tabla += "<td>"+horario[e*8][0]+"</td>";
+                        }
+                        tabla += "</tr>"; 
+                    } else {
+                        for (e = 0; e < horario.length; e += 8){
+                        
+                        tabla += "<td>"+horario[e+x-1][2]+"</td>";
+                        }
+                        tabla += "</tr>";     
+                    }
+                    x++;
+                }
+
+            tabla += '</table>';
+            document.getElementById("solucion").innerHTML = tabla;
+        }
+    </script>
+</body>
+</html>

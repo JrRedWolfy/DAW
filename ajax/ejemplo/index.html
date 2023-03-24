@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJEMPLO DE AJAX</title>
+    <style>
+        .texto{ color:red}
+    </style>
+</head>
+<body>
+<input type="text" placeholder="Ingrese Ciudad a buscar:" id="txtbuscar">
+<div id="resultados"></div>
+<script>
+document.getElementById("txtbuscar").addEventListener("keyup",(e)=>{
+    const data = { texto : e.target.value }
+    fetch("respuesta.php",{
+        method:'POST',
+        body: JSON.stringify(data),
+        headers:{
+            'Accept' : 'application/json',
+            'Content-Type' : 'application/json',
+        }
+    }).then(response => {
+        return response.json()
+    }).then(data =>{        
+        if(data.success){
+            document.getElementById("resultados").innerHTML = '<p class="texto"> ID :'+ data.ciudad.id +', NOMBRE: '+ data.ciudad.nombre+' POBLACIÓN : '+ data.ciudad.poblacion +' </p>'
+        }else{
+            document.getElementById("resultados").innerHTML = '<p>'+ data.mensaje +' </p>'
+        }
+    }).catch(error =>console.error(error));
+})
+
+
+</script>
+</body>
+</html>

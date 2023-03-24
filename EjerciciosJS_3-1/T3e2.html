@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- HTML -->
+    <button onclick="ej2()">Ejercicio 2</button>
+    <br><br>
+    <section id="ejer2"></section>
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        function ej2(){
+            let letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'];
+            let respuesta;
+
+            do{
+                n = prompt ("Escribe el número del DNI");
+            }while(n.length != 8 || isNaN(n));
+
+            respuesta = parseInt(n) % 23;
+            document.getElementById("ejer2").innerHTML = "La letra de tu DNI es: "+letras[respuesta];
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  color: #555555;
+}
+
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 11;
+}
+
+.logo {
+    width: 40%;
+}
+
+.hello {
+    display: inline-block;
+    border: 1px solid #5C64CF;
+    padding: 8px 20px;
+    color: #5C64CF;
+    -webkit-transform: rotate(-35deg);
+    transform: rotate(-35deg);
+}
+
+.contact-infos {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+
+/* CÍRCULOS PARA LOS ICONOS DE LA SECCIÓN CONTACTO */
+.contact-infos .icon {
+    width: 55px;
+    height: 55px;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #5C64CF;
+    color: #fff;
+    border-radius: 50%;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: 25px;
+  }
+
+
+  /* CAJAS PARA LA SECCIÓN DE SERVICIOS */
+  .feature-box-01 {
+    padding: 40px;
+    background: #fff;
+    border: 2px solid #18171C;
+    box-shadow: 0 0 0 0 #18171C;
+    transition: ease all 0.35s;
+  }
+
+  .feature-box-01 .number {
+    font-size: 40px;
+  }
+
+  .feature-box-01 .icon {
+    margin-top: 25px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    line-height: 1;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background: #F7AF24;
+    color: #18171C;
+    font-size: 32px;
+  }
+
+  .feature-box-01 h5 {
+    font-size: 22px;
+    color: #18171C;
+    margin-bottom: 10px;
+  }
+
+  /* FONDO DE ALGUNAS DE LAS SECCIONES */
+  .bg-gray {
+    background: rgba(247, 175, 36, 0.1);
+  }

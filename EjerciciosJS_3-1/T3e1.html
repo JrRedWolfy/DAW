@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="ej1()">Ejercicio 1</button>
+
+    <p id="ejer1"></p>
+
+
+    <script>
+
+        function ej1(){
+            let vNum = [];
+            let n;
+
+            do{
+                n = prompt("Introduce numeros enteros(teclea 0 para terminar)");
+                n = parseInt(n);
+                
+                if(!isNaN(n)&& n !=0){
+                    
+                    vNum.push(n);
+                }
+            }while(n != 0);
+
+            for (let x = 0; x < vNum.length; x++){
+                
+                n += vNum[x];
+            }
+            let solution = n/vNum.length;
+            document.getElementById("ejer1").innerHTML = "La media aritmetica de los numeros introducidos es: " + solution;
+        }
+
+    </script>
+
+</body>
+</html>

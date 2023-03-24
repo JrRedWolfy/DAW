@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        table, tr, td{
+        border: 2px solid green;
+        padding: 10px 30px;
+        text-align: center;
+        border-collapse: collapse;
+    }
+    </style>
+
+    <!-- HTML -->
+    <button onclick="EJ17()">Ejercicio 17</button>
+    <br><br>
+    <section id="solucion"></section>
+
+    <!-- JAVASCRIPT -->
+    <script>
+function EJ17(){
+            
+            var horario = [
+                ['','Lunes','Martes','Miércoles','Jueves','Viernes'],
+                ['09:00-09:50','DWS','DIW','DWS','DWC','EIE'],
+                ['09:50-10:40','DWS','DIW','DWS','DWC','EIE'],
+                ['10:40-11:00','RECREO','RECREO','RECREO','RECREO','RECREO'],
+                ['11:00-10:50','DWS','DWS','DIW','DWS','DIW'],
+                ['11:50-12:40','EIE','DWS','DIW','DWS','DIW'],
+                ['12:40-12:55','RECREO','RECREO','RECREO','RECREO','RECREO'],
+                ['12:55-13:45','DAW','DWC','ING','DAW','DWC'],
+                ['13:45-14:35','DAW','DWC','ING','DAW','DWC']
+                ];
+
+            let tabla = '<table cellspacing="0" cellpadding="0">';
+
+            for (i=0; i<horario.length; i++){
+
+                
+                tabla += "<tr>";
+
+                for(j=0; j<horario[i].length; j++){
+
+                    if(j==0){
+                        
+                        tabla += "<td>"+horario[i][j]+"</td>";
+                        j = j + 1;
+                    }
+                    tabla += "<td>"+horario[i][j]+"</td>";
+                    
+                }
+                tabla += "</tr>";
+                
+
+            }
+            tabla += '</table>';
+            document.getElementById("solucion").innerHTML = tabla;
+        }
+    </script>
+</body>
+</html>

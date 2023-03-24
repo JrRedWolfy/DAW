@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="ej15()">Ejercicio 15</button>
+
+    <p id="ejer15"></p>
+
+
+    <script>
+
+        function ej15(){
+
+            let fNac = prompt("Introduce tu fecha de nacimiento en el siguiente formato (yyyy-MM-dd)");
+
+            let fecha = Date.now();
+
+            let parts = fNac.split('-');
+            let myDate = new Date(parts[0], parts[1] - 1, parts[2]); 
+
+            let result = new Date();
+            result = fecha - myDate;
+            let n = Math.trunc((result/1000)/31536000);
+
+            document.getElementById("ejer15").innerHTML = "El sujeto tiene " + n + " años."; 
+        }
+
+    </script>
+
+</body>
+</html>

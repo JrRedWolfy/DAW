@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- HTML -->
+    <button onclick="ej14()">Ejercicio 14</button>
+    <br><br>
+    <section id="ejer14"></section>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        function ej14(){
+            let anio, bisiesto=false, fecha = new Date();
+            anio = fecha.getFullYear();
+            if (fecha.getFullYear % 4 == 0){
+                bisiesto=true;
+                document.getElementById("ejer14").innerHTML = "El año "+anio+" es bisiesto";
+            }
+            else{
+                document.getElementById("ejer14").innerHTML = "El año "+anio+" no es bisiesto";
+            }
+        }
+    </script>
+</body>
+</html>

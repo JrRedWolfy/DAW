@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="ej11(rb = 0)">Boton Rojo-Start</button>
+
+    <button onclick="ej11(rb = 1)">Boton Azul-End</button>
+
+    <p id="ejer11"></p>
+
+
+    <script>
+
+        let fecRed, fecBlue;
+        let redblue, bluered;
+
+        function ej11(rb){
+
+            let hora, minut, sec;
+            
+            if (rb == 0){
+                redblue = false;
+                bluered = false;
+            } else {
+                bluered = false;
+            };
+            
+            switch(rb){
+                case 0:
+                    fecRed = Date.now();
+                    redblue = true;
+                    break;
+                case 1:
+                    fecBlue = Date.now();
+                    bluered = true;
+                    break;
+                default:
+                    break;
+            }
+
+            if (redblue == true && bluered == true){
+                redblue = false; 
+                bluered = false;
+                let result = new Date();
+                result = (fecBlue - fecRed)/1000;
+
+                document.getElementById("ejer11").innerHTML = "Intervalo de " + result + " segundos.";
+            }
+            
+            
+        }
+
+    </script>
+
+</body>
+</html>

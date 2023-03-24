@@ -1,0 +1,603 @@
+/* body{
+    background-image: url("img/hushe.jpeg");
+} */
+
+#menuFondo{
+    height: 90vh;
+    background-image: linear-gradient(rgba(40, 40, 40, 0.5),rgba( 40, 40, 40, 0.9)), url("../img/hushe.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+nav{
+    color: #ffffff;
+}
+
+#cerrar_sesion {
+    width: 160px;
+    height: 50px;
+    text-align: center;
+    font-size: 16px;
+    font-family: Montserrat;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.card {
+    border-radius: 10px;
+    margin: 4%;
+}
+
+.card a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.card-header{
+    background-color: #566069;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+h5{
+    font-family: Josefin Sans;
+    font-size: 26px;
+}
+
+#loginForm {
+    margin-top: 10%;
+    padding: 1% 4% 1% 2%;
+    background-color: linear-gradient(rgba(255, 255, 255, 1),rgba(255, 255, 255, 1));
+    border-radius: 10px;
+    border: 2px #ffffff solid;
+}
+
+/*css primera pagina boton acceder*/
+#acceder_sesion{
+    width: 160px;
+    height: 50px;
+    color: #000000;
+    background-color: #EFE378;
+    border-color: #508C34;
+    text-align: center;
+    font-size: 16px;
+    font-family: Montserrat;
+    font-weight: bold;
+    margin-left: 90%;
+    margin-top: 5%;
+}
+
+#div_asociacion_fundacion{
+    margin-left: 7%;
+}
+
+#div_asociacion_fundacion u{
+    font-size: 20px;
+}
+
+.titulosPrincipales{
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+.titulo1{
+    color: #d65636;
+    font-size: 50px;
+    font-family: Montserrat;
+}
+
+.titulo2{
+    color: #000000;
+    font-size: 50px;
+    font-family: Montserrat;
+}
+
+.contenido{
+    padding-left: 30%;
+    padding-right: 30%;
+    font-weight: bold;
+    font-family: Josefin Sans;
+    color: #fff5f5;
+    text-align: justify;
+    font-size: 18px;
+}
+
+/*Css de las paginas de Gestion Admin*/
+
+#anadir{
+    float:right;
+    background-color: #0d6efd;
+}
+  
+.container {
+    text-align: center;
+}
+  
+table{
+    font-family: 'Montserrat', sans-serif;
+}
+  
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #8ec4ff;
+}
+  
+.table-hover tbody tr:hover {
+    background-color: #7598fd;
+    color: #FFFFFF;
+}
+  
+.thead-azul {
+    background-color: #5b9bd5;
+    color: white;
+}
+  
+.page-item{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+  
+#breadcrumb-item{
+    color: #0d6efd;
+}
+  
+.Ingreso{
+    font-family: 'Montserrat', sans-serif;
+    color:#04B431;
+  }
+  
+.modal{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Css Ventana Modal */
+.modalJS {
+    display: none;
+    position: fixed;
+    z-index: 1; /* Se situará por encima de otros elementos de la página*/
+    padding-top: 30px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Se activará el scroll si es necesario */
+    background-color: rgba(0,0,0,0.5); /* Se diferencie entre el modal y resto de la pagina */
+    
+  }
+  
+  /* Ventana o caja modal */
+.contenido-modal {
+    position: relative;
+    background-color: white;
+    margin: auto;
+    padding: 10px;
+    width: 25%;
+}
+  
+.cerrar{
+    float:right;
+}
+  
+input[type=text], [type=date], [type=number], select {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
+.tituloModal{
+    float:left;
+}
+
+.boton{
+    background-color: #0d6efd;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+}
+  
+#abrirModal{
+    float:right;
+    background-color: #0d6efd;
+    color:white;
+    border-radius: 5px;
+    padding-top:0.35em;
+    padding-left:0.75em;
+    padding-right:0.75em;
+    padding-bottom:0.35em;
+}
+
+#AddAlumno{
+    float:right;
+    background-color: #0d6efd;
+    color:white;
+    border-radius: 5px;
+    padding-top:0.35em;
+    padding-left:0.75em;
+    padding-right:0.75em;
+    padding-bottom:0.35em;
+}
+  
+input:focus, input[type]:focus, select:focus {
+    border-color: #95c0fe;
+    box-shadow: 0 1px 1px  #95c0fe inset, 0 0 8px  #95c0fe;
+    outline: 0 none;
+}
+
+  /* MODAL NUEVA CIUDAD */
+.contenidoModal{
+    position: relative;
+    background-color: white;
+    margin: auto;
+    padding: 10px;
+    width: 25%;
+}
+
+#modalCiudad{
+    float: center;
+    background-color: #0d6efd;
+    color: #FFFFFF;
+    padding-top: 0.35em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    padding-bottom: 0.75em;
+}
+
+.cerrarVentana{
+    float: right;
+}
+
+input[type=text], [type=date], [type=number], select {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.titulo{
+    float:left;
+}
+
+.button{
+    background-color: #0d6efd;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+}
+
+#botonCiudad{
+    float:right;
+    background-color: #0d6efd;
+    color:white;
+    border-radius: 5px;
+    padding-top:0.35em;
+    padding-left:0.75em;
+    padding-right:0.75em;
+    padding-bottom:0.35em;
+}
+
+input:focus, input[type]:focus, select:focus {
+    border-color: #95c0fe;
+    box-shadow: 0 1px 1px  #95c0fe inset, 0 0 8px  #95c0fe;
+    outline: 0 none;
+}
+
+/* MODAL NUEVOS MOVIMIENTOS */
+.modalJS { 
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 30px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+    
+}
+
+.content {
+    position: relative;
+    background-color: white;
+    margin: auto;
+    padding: 10px;
+    width: 25%;
+}
+  
+.salir{
+    float:right;
+}
+  
+input[type=text], [type=date], [type=number], select {
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
+.title{
+    float:left;
+}
+
+#insert{
+    float:right;
+    background-color: #0d6efd;
+    color:white;
+    border-radius: 5px;
+    padding-top:0.35em;
+    padding-left:0.75em;
+    padding-right:0.75em;
+    padding-bottom:0.35em;
+}
+
+/*Colorines en los Prestamos y economia*/
+  
+.verde {
+    color: green;
+}
+
+.gris {
+    color: #656565;
+}
+
+.rojo {
+    color: red;
+}
+
+.negro {
+    color:#000000;
+}
+
+/*Css botones Ordenacion*/
+
+th button {
+    background: none;
+    border: 0;
+    color: inherit;
+}
+
+th button:hover {
+    color: #e0da2d;
+}
+
+/*CSS TABLAS*/
+
+table.table_sheet {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+table.table_sheet td, table.blueTable th {
+    padding: 3px 2px;
+}
+
+table.table_sheet tbody td {
+    font-size: 18px;
+}
+
+table.table_sheet thead th {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+table.table_sheet thead th:first-child {
+    border-left: none;
+}
+
+/*ACCESIBILIDAD*/
+
+.panel_accesibilidad {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    vertical-align: top;
+    text-align: center;
+    z-index: 10;
+    background-color: none;
+}
+
+.accesBtn {
+    font-size: 18px !important;
+}
+
+.accesibilidad {
+    transition: 1s;
+}
+
+.acces_butt {
+    display: flex;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%;
+    height: 40px;
+    font-size: 35px;
+    background-color: #000000;
+    color: #ffffff;
+    top: 85px;
+    z-index: 10;
+}
+
+.show{
+    display: inline-block;
+}
+
+.hide{
+    display: none;
+}
+
+.contraste {
+    margin: 0px 20px;
+    height: 14px;
+    width: 80px;
+}
+
+.font_size {
+    background-color: #000000;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.low-contrast {
+    background-color: #0d6efd;
+}
+
+.high-contrast {
+   background-color: #FBDCD0; 
+}
+
+.alternative {
+    background-color: #FDF5ED;
+}
+
+/*Color Fondo*/
+.color_fondo {
+    background-color: #e8e8e8;
+    background-size: cover;
+    height: 90vh;
+}
+
+.color_fondoA {
+    background-color: #FBDCD0;
+    background-size: cover;
+    height: 90vh;
+}
+
+.color_fondoH {
+    background-color: #FDF5ED;
+    background-size: cover;
+    height: 90vh;
+}
+
+/*Color Tablas*/
+
+table.color_sheet {
+    border: 1px solid #1C6EA4;
+    background-color: #EEEEEE;
+}
+
+table.color_sheet td, table.blueTable th {
+    border: 1px solid #AAAAAA;
+}
+
+table.color_sheet tr:nth-child(even) {
+    background: #D0E4F5;
+}
+
+table.color_sheet thead {
+    background: #1C6EA4;
+    background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    border-bottom: 2px solid #444444;
+}
+
+table.color_sheet thead th {
+    color: #FFFFFF;
+    border-left: 2px solid #D0E4F5;
+}
+
+/*Tabla A*/
+
+.color_sheetA {
+    color: #ffffff !important;
+}
+
+table.color_sheetA {
+    border: 1px solid #ad9288;
+    background-color: #f8e9e3;
+}
+
+table.color_sheetA td, table.blueTable th {
+  border: 1px solid #AAAAAA;
+}
+
+table.color_sheetA tr:nth-child(even) {
+    background: #555555;
+}
+
+table.color_sheetA thead {
+    background: #ad9288;
+    background: -moz-linear-gradient(top, #f8e9e3 0%, #f8e9e3 66%, #ad9288 100%);
+    background: -webkit-linear-gradient(top, #f8e9e3 0%, #f8e9e3 66%, #ad9288 100%);
+    background: linear-gradient(to bottom, #f8e9e3 0%, #f8e9e3 66%, #ad9288 100%);
+    border-bottom: 2px solid #444444;
+}
+
+table.color_sheetA thead th {
+    color: #FFFFFF;
+    border-left: 2px solid #D0E4F5;
+}
+
+/*Tabla H*/
+
+.color_sheetH {
+    color: #ffffff !important;
+}
+
+table.color_sheetH {
+    border: 1px solid #000000;
+    background-color: #240808;
+}
+
+table.color_sheetH td, table.blueTable th {
+  border: 1px solid #AAAAAA;
+}
+
+table.color_sheetH tr:nth-child(even) {
+  background: #530c1f;
+}
+
+table.color_sheetH thead {
+    background: #000000;
+    background: -moz-linear-gradient(top, #240808 0%, #240808 66%, #000000 100%);
+    background: -webkit-linear-gradient(top, #240808 0%, #240808 66%, #000000 100%);
+    background: linear-gradient(to bottom, #240808 0%, #240808 66%, #000000 100%);
+    border-bottom: 2px solid #444444;
+}
+
+table.color_sheetH thead th {
+    color: #FFFFFF;
+    border-left: 2px solid #D0E4F5;
+}
+
+/*Color Inputs*/
+
+.color_input{
+    background-color: #FFFFFF;
+    border: 1px solid #778899;
+    color: #000000;
+}
+
+.color_inputA{
+    background-color: #000000;
+    border: 1px solid #792396;
+    color: #ffffff;
+}
+
+.color_inputH{
+    background-color: #000000;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+/*FETCH */
+
+.formMal{
+    border:1px solid red !important;
+}
+
+.formBien{
+    border:1px solid green !important;
+}

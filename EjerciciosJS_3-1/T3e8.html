@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- HTML -->
+    <button onclick="ej8()">Ejercicio 8</button>
+    <br><br>
+    <section id="ejer8"></section>
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        function ej8(){
+            let nombre, nom, apell;
+
+            nombre = prompt('Escribe el nombre completo');
+            let splitNombre = nombre.split(" ");
+
+            if (splitNombre.length>3){
+                nom = splitNombre[0]+" "+splitNombre[1];
+                apell = splitNombre[2]+" "+splitNombre[3];
+            }
+            else{
+                nom = splitNombre[0];
+                apell = splitNombre[1]+" "+splitNombre[2];
+            }
+
+            if (nombre==""){
+                document.getElementById("ejer8").innerHTML = "Debes escribir tu nombre";
+            }
+            else{
+                document.getElementById("ejer8").innerHTML = "Nombre: "+nom+"<br>Apellidos: "+apell;
+            }
+        }
+    </script>
+</body>
+</html>

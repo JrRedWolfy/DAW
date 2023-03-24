@@ -1,0 +1,53 @@
+SHEET
+
+version: "3.7"
+# SERVICIOS - APLICACIONES, CADA SERVICIO CON UN NOMBRE
+services:
+  # WEBSERVER APACHE
+  apache:
+    container_name: wsapache
+    #build: ./docker/apache , SE CREA USANDO UN DOCKERFILE
+    image: romeoz/docker-apache-php
+    ports:
+      - "81:80"
+  # WEBSERVER NGINX
+  nginx:
+    container_name: wsnginx
+    #build: ./docker/nginx , SE CREA USANDO UN DOCKERFILE
+    image: wyveo/nginx-php-fpm
+    ports:
+      - "80:80"
+      - "443:443"
+  # DATABASE SERVER MYSQL
+  mysql:
+    container_name: mysql
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'db'
+      # So you don't have to use root, but you can if you like
+      MYSQL_USER: 'root'
+      # You can use whatever password you like
+      MYSQL_PASSWORD: 'howler'
+      # Password for root access
+      MYSQL_ROOT_PASSWORD: 'howler'
+    ports:
+      - "3306:3306"
+ # PHPMYADMIN MYSQL
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: pma
+    ports:
+      - 8081:80
+
+COMANDOS UTILES
+
+<--Navegacion y otras utilidades-->
+ls   -> Mostrar contenido de carpeta
+cd     -> Ir a carpeta
+chmod     -> Asignar permisos; <carpeta> 777 (Permisos) 
+
+docker-compose down    -> Se usa desde la carpeta donde este el archivo compose
+docker-compose up -d   -> Se usa para poner en marcha un compose; -d es para desligarlo del docker
+
+
